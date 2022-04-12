@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="app-name" basedir="." default="build">
+
+ <!-- These properties are used by merge processes -->
+ <property name="product" value="app-name.xsl"/>
+ <property name="version" value="0.1"/>
+ <property name="copyright" value="Copyright (C) 2022 xslet project"/>
+ <property name="license" value="MIT License"/>
+ <property name="prodtype" value="library"/>
+
+
+ <!-- Dependencies for this project -->
+ <property name="dep.xslutil.version" value="1.0.2"/>
+
+ <target name="setup:deps" depends="setup:deps:base">
+  <antcall target="setup:xslet-lib">
+   <param name="package" value="xslutil"/>
+   <param name="version" value="${dep.xslutil.version}"/>
+  </antcall>
+ </target>
+
+
+ <import file="res/ant/build.targets.xml"/>
+ <import file="res/ant/build.dependencies.xml"/>
+ <import file="res/ant/build.directories.xml"/>
+
+</project>
