@@ -5,7 +5,7 @@ xslbook-base is a XSLT library for xslbook, which provides common named template
 
 ## Namespace
 
-`xmlns:book="https://github.com/xslet/year/xslbook"`
+`xmlns:book="https://github.com/xslet/2020/xslbook"`
 
 
 ## API
