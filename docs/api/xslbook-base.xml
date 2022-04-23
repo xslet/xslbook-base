@@ -6,7 +6,7 @@
 
 ** Copyright (C) 2022 xslet project
 ** MIT License
---><xsl:stylesheet xmlns:book="https://github.com/xslet/2020/xslbook" xmlns:do="https://github.com/xslet/2020/xsldo" xmlns:ut="https://github.com/xslet/2020/xslutil" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><!--** A set of utilities for XSLT programs on Web browsers. --><xsl:import href="xslutil.xsl"/><!--** XML data operation libraries for XSLT programs on Web browsers.  --><xsl:import href="xsldo.xsl"/><!--** XML data operation elements for xslbook. --><xsl:import href="xslbook-do.xsl"/><!--**
+--><xsl:stylesheet xmlns:book="https://github.com/xslet/2020/xslbook" xmlns:do="https://github.com/xslet/2020/xsldo" xmlns:ut="https://github.com/xslet/2020/xslutil" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><!--** A set of utilities for XSLT programs on Web browsers. --><xsl:import href="xslutil.xsl"/><!--** XML data operation libraries for XSLT programs on Web browsers.  --><xsl:import href="xsldo.xsl"/><!--** XML data operation elements for xslbook. --><xsl:import href="xslbook-do.xsl"/><xsl:strip-space elements="*"/><!--**
   Gets the URL of the XSL file to transform a XML file.
  --><xsl:param name="book:xsl_url"><xsl:call-template name="ut:get_xsl_url"/></xsl:param><!--**
   Get the directory path of the XSL file to transform a XML file.
