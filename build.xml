@@ -11,9 +11,9 @@
 
 
  <!-- Dependencies for this project -->
- <property name="dep.xslutil.version" value="1.0.2"/>
- <property name="dep.xsldo.version" value="1.0.2"/>
- <property name="dep.xslbook-do.version" value="0.2.0"/>
+ <property name="dep.xslutil.version" value="1.0.3"/>
+ <property name="dep.xsldo.version" value="1.0.3"/>
+ <property name="dep.xslbook-do.version" value="0.2.1"/>
 
  <target name="setup:deps" depends="setup:deps:base">
   <antcall target="setup:xslet-lib">
