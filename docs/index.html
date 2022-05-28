@@ -23,7 +23,7 @@
   <header>
    <h1>xslbook-base <span class="version">Ver 0.1</span></h1>
    <p>
-A base library for xslbook.
+A XSLT library which provides common match templates, named templates, and parameters that are used by other xslbook libraries.
    </p>
    <p>
 Copyright (C) xslet project.<br>
@@ -35,7 +35,16 @@ MIT License.
   <section>
    <h2>About xslbook-base</h2>
    <p>
-xslbook-base is a XSLT library for xslbook, which provides common named templates and parameters to other xslbook component libraries.
+This library implements templates and parameters that are imported and commonly used  by all other xslbook libraries, along with xslbook-do.
+   </p>
+   <p>
+The match templates  applied to <body> elements are used for body texts of book, chapters, and block elements. Book texts and chapter texts are not used in XML data operation elements (those are implemented in xslbook-do), but texts of block elements are used in XML data operation elements. (Block elements could appear in <if> or <for> elements.) Therefore match templates for <body> elements are implemented separatedly by @mode attribute depending on whether it is used in XML data operation elements. The @mode  of the template for book texts and chapter texts has the value "xslbook", and the @mode of the template for block elements has no value.
+   </p>
+   <p>
+book:xsl_url and book:xsl_dir are common parameters for a XSL file specified at a processing instruction. The former is a path of the XSL file, and the latter is a parent directory of it. book:xsl_dir is also used for getting paths of resource files in the same directory, e.g. xslbook.css and xslbook.js.
+   </p>
+   <p>
+In addition, this library provides more named-templates.
    </p>
   </section>
 
