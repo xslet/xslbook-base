@@ -60,6 +60,7 @@
    <fileset dir="${dir.deploy}"    includes="**/*"/>
    <fileset dir="${dir.docs.test}" includes="**/*"/>
    <fileset dir="${dir.docs.api}"  includes="**/*"/>
+   <fileset dir="${dir.test.res}"  includes="**/*"/>
   </delete>
   <exec executable="find" os="Mac OS X">
    <arg line=". -name .DS_Store -delete"/>
@@ -127,7 +128,7 @@
    </fileset>
   </path>
   <java classname="net.sf.saxon.Transform">
-   <arg line="-o:${dir.test.unit}" />
+   <arg line="-o:${dir.test.res.test}" />
    <arg line="-s:${dir.src.xsl}" />
    <arg line="-xsl:${dir.res.xsl}/merge-for-test.xsl" />
    <arg line="-strip:all" />
@@ -159,11 +160,14 @@
  <target name="deploy"
    description="Deploy distributable files and test files to Tomcat.">
   <antcall target="deploy:xsl:imported"/>
+  <copy todir="${dir.test.res.dist}">
+   <fileset dir="${dir.dist}"/>
+  </copy>
+  <copy todir="${dir.test.res.test}">
+   <fileset dir="${dir.res.doc}"/>
+  </copy>
   <copy todir="${dir.docs.test}">
    <fileset dir="${dir.test}"/>
-  </copy>
-  <copy todir="${dir.docs.test}/unit">
-   <fileset dir="${dir.res.doc}"/>
   </copy>
   <antcall target="deploy:xsldoc:built"/>
   <antcall target="deploy:xsldoc:dep"/>
@@ -190,7 +194,12 @@
     <include name="*/dist/*.xsl"/>
    </fileset>
   </copy>
-  <copy todir="${dir.test.unit}" flatten="true">
+  <copy todir="${dir.test.res.test}" flatten="true">
+   <fileset dir="${dir.work.xsl}">
+    <include name="*/dist/*.xsl"/>
+   </fileset>
+  </copy>
+  <copy todir="${dir.test.res.dist}" flatten="true">
    <fileset dir="${dir.work.xsl}">
     <include name="*/dist/*.xsl"/>
    </fileset>
