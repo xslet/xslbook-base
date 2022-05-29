@@ -137,8 +137,8 @@
      <head>
       <meta charset="utf-8" />
       <title><xsx:value-of select="@title" /></title>
-      <link rel="stylesheet" href="./unit-test.css" />
-      <script src="./unit-test.js"></script>
+      <link rel="stylesheet" href="../res/test/unit-test.css" />
+      <script src="../res/test/unit-test.js"></script>
      </head>
      <body>
       <div id="passFailBar"/>

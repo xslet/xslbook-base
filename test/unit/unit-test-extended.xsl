@@ -6,7 +6,7 @@
  xmlns:book="https://github.com/xslet/2020/xslbook"
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
- <xsl:import href="unit-test.xsl"/>
+ <xsl:import href="../res/test/unit-test.xsl"/>
 
  <xsl:template match="value-of-param">
   <xsl:choose>

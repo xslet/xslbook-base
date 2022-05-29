@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook>
+ <title>Body element</title>
+
+ <body>
+This is a text of a body of &lt;xslbook&gt; element.
+ </body>
+
+ <body>
+  <for each="/xslbook/Aaa/Bbb/Ccc">
+   <body>
+This is a text of a body in &lt;for&gt; element.
+The value of &lt;index&gt; should not be empty: [<index/>].
+   </body>
+  </for>
+  <for each="/xslbook/Aaa/Bbb/Ccc">
+  </for>
+ </body>
+
+ <Aaa>
+  <Bbb>
+   <Ccc>123</Ccc>
+   <Ccc>456</Ccc>
+  </Bbb>
+  <Bbb>
+   <Ccc>789</Ccc>
+   <Ccc>987</Ccc>
+  </Bbb>
+ </Aaa>
+</xslbook>
