@@ -29,7 +29,7 @@ See the file LICENSE in this distribution for more details.
 [repo-url]: https://github.com/xslet/xslbook-base
 [io-image]: https://img.shields.io/badge/HP-github.io-ff8888.svg
 [io-url]: https://xslet.github.io/xslbook-base
-[ver-image]: https://img.shields.io/badge/version-0.1.1-blue.svg
+[ver-image]: https://img.shields.io/badge/version-0.1.2-blue.svg
 [mit-image]: https://img.shields.io/badge/license-MIT-green.svg
 [mit-url]: https://opensource.org/licenses/MIT
 [api-url]: https://xslet.github.io/xslbook-base/api/xslbook-base.xml
