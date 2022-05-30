@@ -8,10 +8,10 @@
 
  <!--**
   This match template is applied to <body> element for book texts or chapter texts.
-  This @mode attribute has the value "xslbook".
+  This @mode attribute has the value "chapter".
   A <body> element has child elements, including XML data operation elements implemented in xslbook-do. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
- <xsl:template match="body" mode="xslbook">
+ <xsl:template match="body" mode="chapter">
   <!--** A name of this parent element. -->
   <xsl:param name="parent"/>
   <!--** An URL of external data file from an ancestor element. -->

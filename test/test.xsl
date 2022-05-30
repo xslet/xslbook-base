@@ -16,7 +16,7 @@
    </head>
    <body>
     <h1><xsl:value-of select="/xslbook/title"/></h1>
-    <xsl:apply-templates select="body" mode="xslbook">
+    <xsl:apply-templates select="body" mode="chapter">
      <xsl:with-param name="parent">xslbook</xsl:with-param>
     </xsl:apply-templates>
    </body>
