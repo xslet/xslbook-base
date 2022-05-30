@@ -15,12 +15,25 @@
     <title><xsl:value-of select="/xslbook/title"/></title>
    </head>
    <body>
-    <h1><xsl:value-of select="/xslbook/title"/></h1>
-    <xsl:apply-templates select="body" mode="xslbook">
-     <xsl:with-param name="parent">xslbook</xsl:with-param>
+    <h1><xsl:value-of select="title"/></h1>
+    <xsl:apply-templates select="body" mode="chapter">
+     <xsl:with-param name="chapter_type">xslbook</xsl:with-param>
     </xsl:apply-templates>
+    <xsl:for-each select="chapter">
+     <xsl:variable name="_ch_idx" select="position()"/>
+     <h2><xsl:value-of select="title"/></h2>
+     <xsl:apply-templates select="body" mode="chapter">
+      <xsl:with-param name="chapter_type">chapter</xsl:with-param>
+      <xsl:with-param name="chapter_index" select="$_ch_idx"/>
+     </xsl:apply-templates>
+    </xsl:for-each>
    </body>
   </html>
+ </xsl:template>
+
+ <xsl:template match="arg0">
+  <xsl:param name="arg0"/>
+  <xsl:value-of select="$arg0"/>
  </xsl:template>
 
 </xsl:stylesheet>
