@@ -23,13 +23,13 @@
   </xsl:variable>
   <xsl:variable name="_id">
    <xsl:call-template name="book:get_id">
-    <xsl:with-param name="data_url" select="$_data_url"/>
+    <xsl:with-param name="data_url" select="$data_url"/>
    </xsl:call-template>
   </xsl:variable>
   <div class="body {$parent}-body">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:apply-templates select="child::node()[name() != 'attr']">
-    <xsl:with-param name="data_url" select="$data_url"/>
+    <xsl:with-param name="data_url" select="$_data_url"/>
    </xsl:apply-templates>
   </div>
  </xsl:template>
