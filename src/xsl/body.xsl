@@ -12,8 +12,10 @@
   A <body> element has child elements, including XML data operation elements implemented in xslbook-do. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
  <xsl:template match="body" mode="chapter">
-  <!--** A name of this parent element. -->
-  <xsl:param name="parent"/>
+  <!--** The type of chapter. -->
+  <xsl:param name="chapter_type"/>
+  <!--** The index of chapter. -->
+  <xsl:param name="chapter_index"/>
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
   <xsl:variable name="_data_url">
@@ -26,10 +28,11 @@
     <xsl:with-param name="data_url" select="$data_url"/>
    </xsl:call-template>
   </xsl:variable>
-  <div class="body {$parent}-body">
+  <div class="body {$chapter_type}-body">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:apply-templates select="child::node()[name() != 'attr']">
     <xsl:with-param name="data_url" select="$_data_url"/>
+    <xsl:with-param name="arg0" select="$chapter_index"/>
    </xsl:apply-templates>
   </div>
  </xsl:template>
@@ -41,8 +44,10 @@
   A <body> element has child elements, including XML data operation elements implemented in xslbook-do. And this template can have @data-src attribute to obtain data in an external XML file.
  -->
  <xsl:template match="body">
-  <!--** A name of this parent element. -->
-  <xsl:param name="parent"/>
+  <!--** The type of block element. -->
+  <xsl:param name="block_type"/>
+  <!--** The index of chapter. -->
+  <xsl:param name="arg0"/>
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
   <!--** A generated ID of a base node in a data source. -->
@@ -51,8 +56,6 @@
   <xsl:param name="data_index"/>
   <!--** Index set of ancestor <for> element. -->
   <xsl:param name="data_indexes"/>
-  <!--** Any argument 0. -->
-  <xsl:param name="arg0"/>
   <!--** Any argument 1. -->
   <xsl:param name="arg1"/>
   <!--** Any argument 2. -->
@@ -80,7 +83,7 @@
     <xsl:with-param name="arg2" select="$arg2"/>
    </xsl:call-template>
   </xsl:variable>
-  <div class="body {$parent}-body">
+  <div class="body {$block_type}-body">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:apply-templates select="child::node()[name() != 'attr']">
     <xsl:with-param name="data_url" select="$_data_url"/>

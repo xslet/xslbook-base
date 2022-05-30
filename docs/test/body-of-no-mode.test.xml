@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook>
+ <title>Body element (@mode is none)</title>
+ <body>
+  <for each="/xslbook/Aaa/Bbb/Ccc">
+   <body>
+The value of chapter index (arg0) is [<arg0/>].
+The value of for index is [<index/>].
+   </body>
+  </for>
+ </body>
+
+ <chapter>
+  <title>Chapter 1</title>
+  <body>
+   <for each="/xslbook/Aaa/Bbb/Ccc">
+    <body>
+The value of chapter index (arg0) is [<arg0/>].
+The value of for index is [<index/>].
+    </body>
+   </for>
+  </body>
+ </chapter>
+
+ <chapter>
+  <title>Chapter 2</title>
+  <body>
+   <for each="/xslbook/Aaa/Bbb/Ccc">
+    <body>
+The value of chapter index (arg0) is [<arg0/>].
+The value of for index is [<index/>].
+    </body>
+   </for>
+  </body>
+ </chapter>
+
+
+<!--
+ <body>
+This is a text of a body of &lt;xslbook&gt; element.
+ </body>
+
+ <body>
+  <for each="/xslbook/Aaa/Bbb/Ccc">
+   <body>
+This is a text of a body in &lt;for&gt; element.
+The value of &lt;index&gt; should not be empty: [<index/>].
+   </body>
+  </for>
+  <for each="/xslbook/Aaa/Bbb/Ccc">
+  </for>
+ </body>
+-->
+
+ <Aaa>
+  <Bbb>
+   <Ccc>123</Ccc>
+   <Ccc>456</Ccc>
+  </Bbb>
+ </Aaa>
+
+</xslbook>

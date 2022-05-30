@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook>
+ <title>Body element (@mode="chapter")</title>
+ <body>
+The value of chapter index (arg0) is [<arg0/>].
+ </body>
+
+ <chapter>
+  <title>Chapter 1</title>
+  <body>
+The value of chapter index (arg0) is [<arg0/>].
+  </body>
+ </chapter>
+
+ <chapter>
+  <title>Chapter 2</title>
+  <body>
+The value of chapter index (arg0) is [<arg0/>].
+  </body>
+ </chapter>
+
+</xslbook>
