@@ -35,10 +35,14 @@ MIT License.
   <section>
    <h2>About xslbook-base</h2>
    <p>
-This library implements templates and parameters that are imported and commonly used  by all other xslbook libraries, along with xslbook-do.
+This library provides templates and parameters that are imported and commonly used  by all other xslbook libraries, along with xslbook-do.
    </p>
    <p>
-The match templates  applied to <body> elements are used for body texts of book, chapters, and block elements. Book texts and chapter texts are not used in XML data operation elements (those are implemented in xslbook-do), but texts of block elements are used in XML data operation elements. (Block elements could appear in <if> or <for> elements.) Therefore match templates for <body> elements are implemented separatedly by @mode attribute depending on whether it is used in XML data operation elements. The @mode  of the template for book texts and chapter texts has the value "xslbook", and the @mode of the template for block elements has no value.
+The match templates applied to &lt;title&gt; and &lt;desc&gt; elements are used for titles and descriptions of book, chapters, sections, and block elements.
+&lt;title&gt; and &lt;desc&gt; of book, chapters, and sections are not used in XML data operation elements (those are implemented in xslbook-do), but those of block elements are used in XML data operation elements.
+(Block elements cloud appear in &lt;if&gt; or &lt;for&gt; elements.)
+Therefore, match templates for &lt;title&gt; and &lt;desc&gt; are implemented separately by @mode attribute depending on whether it could be used in XML data operation elements.
+The @mode of the templates for book, chapter, section elements have the value "xslbook-base", and those for block elements have the value "xslbook-do".
    </p>
    <p>
 book:xsl_url and book:xsl_dir are common parameters for a XSL file specified at a processing instruction. The former is a path of the XSL file, and the latter is a parent directory of it. book:xsl_dir is also used for getting paths of resource files in the same directory, e.g. xslbook.css and xslbook.js.
@@ -122,22 +126,22 @@ This section provides the result of unit tests and samples of match/named templa
    <h3>Samples</h3>
    <ul>
     <li>
-<a href="test/root.test.xml">title and body of root</a>
+<a href="test/root.test.xml">title and description of root</a>
     </li>
     <li>
-<a href="test/root-with-datasrc.test.xml">title and body of root with data-src</a>
+<a href="test/root-with-datasrc.test.xml">title and description of root with data-src</a>
     </li>
     <li>
-<a href="test/chapter.test.xml">title and body of chapter</a>
+<a href="test/chapter.test.xml">title and description of chapter</a>
     </li>
     <li>
-<a href="test/chapter-with-datasrc.test.xml">title and body of chapter with data-src</a>
+<a href="test/chapter-with-datasrc.test.xml">title and description of chapter with data-src</a>
     </li>
     <li>
-<a href="test/section.test.xml">title and body of section</a>
+<a href="test/section.test.xml">title and description of section</a>
     </li>
     <li>
-<a href="test/section-with-datasrc.test.xml">title and body of section with data-src</a>
+<a href="test/section-with-datasrc.test.xml">title and description of section with data-src</a>
     </li>
    </ul>
   </section>

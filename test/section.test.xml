@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="application/xml" href="test.xsl"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
 
-<xslbook>
- <title>Sample of Section</title>
+<book>
+ <title>Section title and description</title>
 
  <chapter>
-  <title>Chapter</title>
+  <title>CHAPTER TITLE</title>
 
   <section>
-   <title>The <value of="//Aaa/Bbb[1]"/> Section</title> 
-   <body>
-The value of "//Aaa/Bbb[1]" is [<value of="//Aaa/Bbb[1]"/>].
-   </body>
-  </section>
-
-  <section>
-   <title>The <value of="//Aaa/Bbb[2]"/> Chapter</title> 
-   <body>
-The value of "//Aaa/Bbb[2]" is [<value of="//Aaa/Bbb[2]"/>].
-   </body>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+SECTION DESCRIPTION (<value of="//aaa/bbb"/>)
+   </desc>
   </section>
  </chapter>
 
- <chapter>
-  <title>Chapter</title>
-
-  <section>
-   <title>The <value of="//Aaa/Bbb[1]"/> Chapter</title> 
-   <body>
-The value of "//Aaa/Bbb[1]" is [<value of="//Aaa/Bbb[1]"/>].
-   </body>
-  </section>
-
-  <section>
-   <title>The <value of="//Aaa/Bbb[2]"/> Chapter</title> 
-   <body>
-The value of "//Aaa/Bbb[2]" is [<value of="//Aaa/Bbb[2]"/>].
-   </body>
-  </section>
- </chapter>
-
- <Aaa>
-  <Bbb>First</Bbb>
-  <Bbb>Second</Bbb>
- </Aaa>
-</xslbook>
+ <aaa>
+  <bbb>This value is from //aaa/bbb</bbb>
+ </aaa>
+</book>

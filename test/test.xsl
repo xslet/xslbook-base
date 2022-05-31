@@ -8,7 +8,7 @@
 
  <xsl:import href="res/dist/xslbook-base.xsl"/>
 
- <xsl:template match="/xslbook">
+ <xsl:template match="/book">
   <xsl:variable name="_data_url">
    <xsl:call-template name="book:get_data_url"/>
   </xsl:variable>
@@ -29,7 +29,7 @@
      <xsl:with-param name="chapter_index"/>
      <xsl:with-param name="data_url" select="$_data_url"/>
     </xsl:apply-templates>
-    <xsl:apply-templates select="body" mode="xslbook-base">
+    <xsl:apply-templates select="desc" mode="xslbook-base">
      <xsl:with-param name="component_name">xslbook</xsl:with-param>
      <xsl:with-param name="chapter_index"/>
      <xsl:with-param name="data_url" select="$_data_url"/>
@@ -49,7 +49,7 @@
       <xsl:with-param name="chapter_index" select="$_ch_idx"/>
       <xsl:with-param name="data_url" select="$_data_url2"/>
      </xsl:apply-templates>
-     <xsl:apply-templates select="body" mode="xslbook-base">
+     <xsl:apply-templates select="desc" mode="xslbook-base">
       <xsl:with-param name="component_name">chapter</xsl:with-param>
       <xsl:with-param name="chapter_index" select="$_ch_idx"/>
       <xsl:with-param name="data_url" select="$_data_url2"/>
@@ -69,7 +69,7 @@
        <xsl:with-param name="chapter_index" select="$_ch_idx"/>
        <xsl:with-param name="data_url" select="$_data_url3"/>
       </xsl:apply-templates>
-      <xsl:apply-templates select="body" mode="xslbook-base">
+      <xsl:apply-templates select="desc" mode="xslbook-base">
        <xsl:with-param name="component_name">section</xsl:with-param>
        <xsl:with-param name="chapter_index" select="$_ch_idx"/>
        <xsl:with-param name="data_url" select="$_data_url3"/>

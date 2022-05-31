@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="application/xml" href="test.xsl"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
 
-<xslbook data-src="data/sample-1.data.xml">
- <title>Sample of Section</title>
+<book data-src="data/data01.xml">
+ <title>Chapter title and description</title>
 
  <chapter>
-  <title>Chapter</title>
+  <title>CHAPTER TITLE</title>
+
   <section>
-   <title>The <value of="//aaa/bbb"/> Section</title> 
-   <body>
-The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
-   </body>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
   </section>
  </chapter>
 
- <chapter data-src="data/sample-2.data.xml">
-  <title>Chapter</title>
-  <section>
-   <title>The <value of="//aaa/bbb"/> Section</title> 
-   <body>
-The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
-   </body>
-  </section>
- </chapter>
+ <chapter data-src="data/data02.xml">
+  <title>CHAPTER TITLE</title>
 
- <chapter>
-  <title>Chapter</title>
-  <section data-src="data/sample-3.data.xml">
-   <title>The <value of="//aaa/bbb"/> Section</title> 
-   <body>
-The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
-   </body>
+  <section>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
   </section>
  </chapter>
 
  <chapter>
-  <title>Chapter</title>
+  <title>CHAPTER TITLE</title>
+
+  <section data-src="data/data03.xml">
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+
   <section>
-   <title data-src="data/sample-4.data.xml">
-The <value of="//aaa/bbb"/> Section
-   </title> 
-   <body data-src="data/sample-4.data.xml">
-The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
-   </body>
+   <title data-src="data/data04.xml">
+SECTION TITLE [<value of="//aaa/bbb"/>]
+   </title>
+   <desc data-src="data/data04.xml">
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
   </section>
  </chapter>
-</xslbook>
+
+</book>
