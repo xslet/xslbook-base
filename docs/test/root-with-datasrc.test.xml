@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
+
+<xslbook data-src="data/sample-1.data.xml">
+ <title>The value of //aaa/bbb is [<value of="//aaa/bbb"/>].</title>
+ <body>
+  The content of //aaa/bbb is [<content of="//aaa/bbb"/>].
+ </body>
+
+ <title data-src="data/sample-2.data.xml">
+  The value of //aaa/bbb is [<value of="//aaa/bbb"/>].
+ </title>
+ <body data-src="data/sample-3.data.xml">
+  The content of //aaa/bbb is [<content of="//aaa/bbb"/>].
+ </body>
+</xslbook>

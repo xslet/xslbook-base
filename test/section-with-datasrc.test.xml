@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook data-src="data/sample-1.data.xml">
+ <title>Sample of Section</title>
+
+ <chapter>
+  <title>Chapter</title>
+  <section>
+   <title>The <value of="//aaa/bbb"/> Section</title> 
+   <body>
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+   </body>
+  </section>
+ </chapter>
+
+ <chapter data-src="data/sample-2.data.xml">
+  <title>Chapter</title>
+  <section>
+   <title>The <value of="//aaa/bbb"/> Section</title> 
+   <body>
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+   </body>
+  </section>
+ </chapter>
+
+ <chapter>
+  <title>Chapter</title>
+  <section data-src="data/sample-3.data.xml">
+   <title>The <value of="//aaa/bbb"/> Section</title> 
+   <body>
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+   </body>
+  </section>
+ </chapter>
+
+ <chapter>
+  <title>Chapter</title>
+  <section>
+   <title data-src="data/sample-4.data.xml">
+The <value of="//aaa/bbb"/> Section
+   </title> 
+   <body data-src="data/sample-4.data.xml">
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+   </body>
+  </section>
+ </chapter>
+</xslbook>

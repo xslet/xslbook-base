@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook>
+ <title>Sample of Chapter</title>
+
+ <chapter>
+  <title>The <value of="//Aaa/Bbb[1]"/> Chapter</title> 
+  <body>
+The value of "//Aaa/Bbb[1]" is [<value of="//Aaa/Bbb[1]"/>].
+  </body>
+ </chapter>
+
+ <chapter>
+  <title>The <value of="//Aaa/Bbb[2]"/> Chapter</title> 
+  <body>
+The value of "//Aaa/Bbb[2]" is [<value of="//Aaa/Bbb[2]"/>].
+  </body>
+ </chapter>
+
+ <Aaa>
+  <Bbb>First</Bbb>
+  <Bbb>Second</Bbb>
+ </Aaa>
+</xslbook>

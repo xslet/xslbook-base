@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="test.xsl"?>
+
+<xslbook data-src="data/sample-1.data.xml">
+ <title>Sample of Chapter</title>
+
+ <chapter>
+  <title>The <value of="//aaa/bbb"/> Chapter</title> 
+  <body>
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+  </body>
+ </chapter>
+
+ <chapter data-src="data/sample-2.data.xml">
+  <title>The <value of="//aaa/bbb"/> Chapter</title> 
+  <body>
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+  </body>
+ </chapter>
+
+ <chapter>
+  <title data-src="data/sample-3.data.xml">
+   The <value of="//aaa/bbb"/> Chapter
+  </title> 
+  <body data-src="data/sample-3.data.xml">
+The content of "//aaa/bbb" is [<content of="//aaa/bbb"/>].
+  </body>
+ </chapter>
+
+</xslbook>
