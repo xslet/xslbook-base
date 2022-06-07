@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--**
- A XSLT library for xslbook, which provides common named templates and parameters to other xslbook component libraries.
+ A XSLT library which implements common match-templates, named-templates, and parameters in xslbook.
+ This library is imported by other xslbook component libraries along with xslbook-do.
 
  This program is written in XSLT 1.0.
 -->

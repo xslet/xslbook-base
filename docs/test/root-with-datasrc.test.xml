@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
+
+<book data-src="data/data01.xml">
+ <title>BOOK TITLE: [<value of="//aaa/bbb"/>]</title>
+
+ <title data-src="data/data02.xml">
+  BOOK TITLE: [<value of="//aaa/bbb"/>]
+ </title>
+
+ <desc>BOOK DESCRIPTION [<value of="//aaa/bbb"/>]</desc>
+
+ <desc data-src="data/data02.xml">
+  BOOK DESCRIPTION: [<value of="//aaa/bbb"/>]
+ </desc>
+</book>

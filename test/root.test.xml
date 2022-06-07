@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
+
+<book>
+ <title>BOOK TITLE [<value of="//aaa/bbb"/>]</title>
+
+ <desc>
+This is a book description. (<value of="//aaa/bbb"/>).
+ </desc>
+
+ <aaa>
+  <bbb>This value is from //aaa/bbb</bbb>
+ </aaa>
+</book>

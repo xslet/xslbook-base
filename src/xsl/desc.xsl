@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>                                          
-
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
  xmlns:ut="https://github.com/xslet/2020/xslutil"
@@ -7,14 +6,14 @@
  xmlns:book="https://github.com/xslet/2020/xslbook">
 
  <!--**
-  This match template is applied to <body> element for book texts or chapter texts.
-  This @mode attribute has the value "chapter".
-  A <body> element has child elements, including XML data operation elements implemented in xslbook-do. And this template can have @data-src attribute to obtain data in an external XML file.
+  This match template is applied to <desc> element of which a parent element is a component that cannot be included in XML data operation elements, such as <chapter> or <section>.
+  @mode attribute of this template has the value "xslbook-base".
+  <desc> elements that this template is applied to can have child elements, including XML data operation elements, and can have @data-src attribute to obtain data in an external XMl file.
  -->
- <xsl:template match="body" mode="chapter">
-  <!--** The type of chapter. -->
-  <xsl:param name="chapter_type"/>
-  <!--** The index of chapter. -->
+ <xsl:template match="desc" mode="xslbook-base">
+  <!--** The component name which uses this desc element. -->
+  <xsl:param name="component_name"/>
+  <!--** The cchapter index which is passed to child and descendant elements. -->
   <xsl:param name="chapter_index"/>
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
@@ -28,7 +27,7 @@
     <xsl:with-param name="data_url" select="$data_url"/>
    </xsl:call-template>
   </xsl:variable>
-  <div class="body {$chapter_type}-body">
+  <div class="desc {$component_name}-desc">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:apply-templates select="child::node()[name() != 'attr']">
     <xsl:with-param name="data_url" select="$_data_url"/>
@@ -39,14 +38,14 @@
 
 
  <!--**
-  This match template is applied to <body> element for texts of block elements.
-  This @mode attribute has no value.
-  A <body> element has child elements, including XML data operation elements implemented in xslbook-do. And this template can have @data-src attribute to obtain data in an external XML file.
+  This match template is applied to <desc> element of which a parent element is a component that can be included in XML data operation elements, such as <item> of <dict>.
+  @mode attribute of this template has the value "xslbook-do".
+  <desc> elements that this template is applied to can have child elements, including XML data operation elements, and can have @data-src attribute to obtain data in an external XMl file.
  -->
- <xsl:template match="body">
-  <!--** The type of block element. -->
-  <xsl:param name="block_type"/>
-  <!--** The index of chapter. -->
+ <xsl:template match="desc" mode="xslbook-do">
+  <!--** The component name which uses this desc element. -->
+  <xsl:param name="component_name"/>
+  <!--** The chapter index which is passed to child and descendant elements. -->
   <xsl:param name="arg0"/>
   <!--** An URL of external data file from an ancestor element. -->
   <xsl:param name="data_url"/>
@@ -83,7 +82,7 @@
     <xsl:with-param name="arg2" select="$arg2"/>
    </xsl:call-template>
   </xsl:variable>
-  <div class="body {$block_type}-body">
+  <div class="desc {$component_name}-desc">
    <xsl:attribute name="id"><xsl:value-of select="$_id"/></xsl:attribute>
    <xsl:apply-templates select="child::node()[name() != 'attr']">
     <xsl:with-param name="data_url" select="$_data_url"/>

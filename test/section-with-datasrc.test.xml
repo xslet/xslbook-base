@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
+
+<book data-src="data/data01.xml">
+ <title>Chapter title and description</title>
+
+ <chapter>
+  <title>CHAPTER TITLE</title>
+
+  <section>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+ </chapter>
+
+ <chapter data-src="data/data02.xml">
+  <title>CHAPTER TITLE</title>
+
+  <section>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+ </chapter>
+
+ <chapter>
+  <title>CHAPTER TITLE</title>
+
+  <section data-src="data/data03.xml">
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+
+  <section>
+   <title data-src="data/data04.xml">
+SECTION TITLE [<value of="//aaa/bbb"/>]
+   </title>
+   <desc data-src="data/data04.xml">
+This is a section description (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+ </chapter>
+
+</book>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="application/xml" href="./test.xsl"?>
+
+<book>
+ <title>Section title and description</title>
+
+ <chapter>
+  <title>CHAPTER TITLE</title>
+
+  <section>
+   <title>SECTION TITLE [<value of="//aaa/bbb"/>]</title>
+   <desc>
+SECTION DESCRIPTION (<value of="//aaa/bbb"/>)
+   </desc>
+  </section>
+ </chapter>
+
+ <aaa>
+  <bbb>This value is from //aaa/bbb</bbb>
+ </aaa>
+</book>
